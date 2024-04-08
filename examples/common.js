@@ -41059,6 +41059,10 @@
 	
 	var _addEventListener2 = _interopRequireDefault(_addEventListener);
 	
+	var _tinycolor = __webpack_require__(145);
+	
+	var _tinycolor2 = _interopRequireDefault(_tinycolor);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -41163,7 +41167,11 @@
 	        ref: "point",
 	        style: {
 	          left: "calc(" + per + "% - " + offset + "px)",
-	          background: "#" + this.props.color.hex
+	          background: "#" + (0, _tinycolor2.default)({
+	            h: this.props.color.hue,
+	            s: 100,
+	            v: 100
+	          }).toHex()
 	        }
 	      }),
 	      _react2.default.createElement("div", {
