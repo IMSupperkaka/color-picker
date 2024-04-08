@@ -1,6 +1,6 @@
 {
   "name": "@bzl/rc-color-picker",
-  "version": "1.2.6-beta.7",
+  "version": "1.2.6-beta.9",
   "description": "color-picker ui component for react",
   "main": "./lib/index.js",
   "keywords": [
@@ -14,6 +14,9 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:react-component/color-picker.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.weizhipin.com/"
   },
   "bugs": {
     "url": "http://github.com/react-component/color-picker/issues"
