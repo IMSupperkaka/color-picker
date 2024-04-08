@@ -1,39 +1,39 @@
-.rc-color-picker-panel-inner {
+.bzl-rc-color-picker-panel-inner {
   position: relative;
   border-radius: 4px;
   box-shadow: 0 1px 5px #ccc;
   border: 1px solid #ccc;
   padding-bottom: 8px;
 }
-.rc-color-picker-panel-wrap {
+.bzl-rc-color-picker-panel-wrap {
   margin: 8px 0;
   height: 30px;
   width: 100%;
   position: relative;
 }
-.rc-color-picker-panel-wrap-preview {
+.bzl-rc-color-picker-panel-wrap-preview {
   position: absolute;
   left: 8px;
 }
-.rc-color-picker-panel-wrap-ribbon {
+.bzl-rc-color-picker-panel-wrap-ribbon {
   position: absolute;
   left: 48px;
   top: 10px;
   right: 8px;
   height: 10px;
 }
-.rc-color-picker-panel-wrap-alpha {
+.bzl-rc-color-picker-panel-wrap-alpha {
   position: absolute;
   left: 48px;
   right: 8px;
   bottom: 0;
   height: 10px;
 }
-.rc-color-picker-panel-wrap-has-alpha .rc-color-picker-panel-wrap-ribbon {
+.bzl-rc-color-picker-panel-wrap-has-alpha .bzl-rc-color-picker-panel-wrap-ribbon {
   height: 10px;
   top: 0;
 }
-.rc-color-picker-trigger {
+.bzl-rc-color-picker-trigger {
   border: 1px solid #999;
   display: inline-block;
   padding: 2px;
@@ -47,10 +47,10 @@
   cursor: pointer;
   box-shadow: 0 0 0 2px #fff inset;
 }
-.rc-color-picker-trigger-open {
+.bzl-rc-color-picker-trigger-open {
   box-shadow: 0px 0px 3px #999;
 }
-.rc-color-picker-panel {
+.bzl-rc-color-picker-panel {
   width: 192px;
   background-color: #fff;
   box-sizing: border-box;
@@ -63,23 +63,23 @@
   -ms-user-select: none;
   user-select: none;
 }
-.rc-color-picker-panel * {
+.bzl-rc-color-picker-panel * {
   box-sizing: border-box;
 }
-.rc-color-picker-panel-open {
+.bzl-rc-color-picker-panel-open {
   display: block;
 }
-.rc-color-picker-panel-close {
+.bzl-rc-color-picker-panel-close {
   display: none;
 }
-.rc-color-picker-panel-preview {
+.bzl-rc-color-picker-panel-preview {
   height: 30px;
   width: 30px;
   overflow: hidden;
   border-radius: 4px;
   background-image: url("data:image/png;base64,R0lGODdhCgAKAPAAAOXl5f///ywAAAAACgAKAEACEIQdqXt9GxyETrI279OIgwIAOw==");
 }
-.rc-color-picker-panel-preview span {
+.bzl-rc-color-picker-panel-preview span {
   position: absolute;
   display: block;
   height: 100%;
@@ -87,7 +87,7 @@
   border-radius: 4px;
   border: 1px solid #e4e6eb;
 }
-.rc-color-picker-panel-board {
+.bzl-rc-color-picker-panel-board {
   position: relative;
   font-size: 0;
   -webkit-user-select: none;
@@ -96,7 +96,7 @@
           user-select: none;
   margin: 8px 8px 0px;
 }
-.rc-color-picker-panel-board span {
+.bzl-rc-color-picker-panel-board span {
   position: absolute;
   border-radius: 10px;
   border: 1px solid #fff;
@@ -108,14 +108,14 @@
   box-shadow: 0 0 1px rgba(120, 120, 120, 0.7);
   z-index: 2;
 }
-.rc-color-picker-panel-board-hsv {
+.bzl-rc-color-picker-panel-board-hsv {
   width: 174px;
   height: 174px;
   position: relative;
   z-index: 1;
   border-radius: 4px;
 }
-.rc-color-picker-panel-board-value {
+.bzl-rc-color-picker-panel-board-value {
   border-radius: 2px;
   position: absolute;
   width: 100%;
@@ -129,7 +129,7 @@
   background-image: -o-linear-gradient(top, transparent 0%, #000000 100%);
   background-image: linear-gradient(to bottom, transparent 0%, #000000 100%);
 }
-.rc-color-picker-panel-board-saturation {
+.bzl-rc-color-picker-panel-board-saturation {
   border-radius: 2px;
   position: absolute;
   width: 100%;
@@ -143,7 +143,7 @@
   background-image: -o-linear-gradient(left, #ffffff 0%, transparent 100%);
   background-image: linear-gradient(to right, #ffffff 0%, transparent 100%);
 }
-.rc-color-picker-panel-board-handler {
+.bzl-rc-color-picker-panel-board-handler {
   box-shadow: 0 0 2px #808080 inset;
   border-radius: 4px;
   cursor: crosshair;
@@ -158,7 +158,7 @@
   height: 100%;
   z-index: 3;
 }
-.rc-color-picker-panel-ribbon {
+.bzl-rc-color-picker-panel-ribbon {
   position: relative;
   height: 100%;
   border-radius: 10px;
@@ -168,7 +168,7 @@
   background-image: -o-linear-gradient(left, #ff0000 0%, #ff9900 10%, #cdff00 20%, #35ff00 30%, #00ff66 40%, #00fffd 50%, #0066ff 60%, #3200ff 70%, #cd00ff 80%, #ff0099 90%, #ff0000 100%);
   background-image: linear-gradient(to right, #ff0000 0%, #ff9900 10%, #cdff00 20%, #35ff00 30%, #00ff66 40%, #00fffd 50%, #0066ff 60%, #3200ff 70%, #cd00ff 80%, #ff0099 90%, #ff0000 100%);
 }
-.rc-color-picker-panel-ribbon span {
+.bzl-rc-color-picker-panel-ribbon span {
   position: absolute;
   top: -1px;
   height: 100%;
@@ -178,14 +178,14 @@
   border: 1px solid #ffffff;
   box-shadow: 0px 0px 5px 0px #000000b2;
 }
-.rc-color-picker-panel-ribbon-handler {
+.bzl-rc-color-picker-panel-ribbon-handler {
   position: absolute;
   width: 104%;
   height: 100%;
   left: -2%;
   cursor: pointer;
 }
-.rc-color-picker-panel-alpha {
+.bzl-rc-color-picker-panel-alpha {
   position: relative;
   height: 100%;
   width: 100%;
@@ -197,13 +197,13 @@
       -ms-user-select: none;
           user-select: none;
 }
-.rc-color-picker-panel-alpha-bg {
+.bzl-rc-color-picker-panel-alpha-bg {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.rc-color-picker-panel-alpha span {
+.bzl-rc-color-picker-panel-alpha span {
   position: absolute;
   top: 0;
   height: 100%;
@@ -214,23 +214,23 @@
   background-color: #fff;
   border-radius: 3px;
 }
-.rc-color-picker-panel-alpha-handler {
+.bzl-rc-color-picker-panel-alpha-handler {
   position: absolute;
   width: 104%;
   height: 100%;
   left: -2%;
   cursor: pointer;
 }
-.rc-color-picker-panel-params {
+.bzl-rc-color-picker-panel-params {
   font-size: 10px;
 }
-.rc-color-picker-panel-params-input {
+.bzl-rc-color-picker-panel-params-input {
   display: -ms-flexbox;
   display: flex;
   padding: 0 8px;
   gap: 8px;
 }
-.rc-color-picker-panel-params input {
+.bzl-rc-color-picker-panel-params input {
   height: 28px;
   line-height: 28px;
   -webkit-user-select: text;
@@ -241,12 +241,12 @@
   outline: none;
   padding: 4px 8px;
 }
-.rc-color-picker-panel-params-hex {
+.bzl-rc-color-picker-panel-params-hex {
   width: 59px;
   border-radius: 4px;
   border: 1px solid #e4e6eb;
 }
-.rc-color-picker-panel-params-input-right {
+.bzl-rc-color-picker-panel-params-input-right {
   display: -ms-flexbox;
   display: flex;
   -ms-flex: 1;
@@ -255,21 +255,21 @@
   border-radius: 4px;
   overflow: hidden;
 }
-.rc-color-picker-panel-params-input-right input {
+.bzl-rc-color-picker-panel-params-input-right input {
   width: 0;
   border: none;
 }
-.rc-color-picker-panel-params-input-right input:not(:last-child) {
+.bzl-rc-color-picker-panel-params-input-right input:not(:last-child) {
   border-right: 1px solid #e4e6eb;
 }
-.rc-color-picker-panel-params input[type="number"] {
+.bzl-rc-color-picker-panel-params input[type="number"] {
   -ms-flex: 1;
       flex: 1;
 }
-.rc-color-picker-panel-params input[type="number"]::-webkit-inner-spin-button {
+.bzl-rc-color-picker-panel-params input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.rc-color-picker-panel-params-lable {
+.bzl-rc-color-picker-panel-params-lable {
   display: -ms-flexbox;
   display: flex;
   padding: 0 8px;
@@ -281,37 +281,37 @@
   color: #404a59;
   margin-bottom: 4px;
 }
-.rc-color-picker-panel-params-lable-hex {
+.bzl-rc-color-picker-panel-params-lable-hex {
   width: 59px;
 }
-.rc-color-picker-panel-params-lable-right {
+.bzl-rc-color-picker-panel-params-lable-right {
   display: -ms-flexbox;
   display: flex;
   -ms-flex: 1;
       flex: 1;
 }
-.rc-color-picker-panel-params-lable-right > label {
+.bzl-rc-color-picker-panel-params-lable-right > label {
   -ms-flex: 1;
       flex: 1;
 }
-.rc-color-picker-panel-params-has-alpha input[type="number"] {
+.bzl-rc-color-picker-panel-params-has-alpha input[type="number"] {
   width: 32px;
 }
-.rc-color-picker-panel-params-has-alpha .rc-color-picker-panel-params-lable-number,
-.rc-color-picker-panel-params-has-alpha .rc-color-picker-panel-params-lable-alpha {
+.bzl-rc-color-picker-panel-params-has-alpha .bzl-rc-color-picker-panel-params-lable-number,
+.bzl-rc-color-picker-panel-params-has-alpha .bzl-rc-color-picker-panel-params-lable-alpha {
   width: 32px;
 }
-.rc-color-picker {
+.bzl-rc-color-picker {
   position: absolute;
   left: -9999px;
   top: -9999px;
   z-index: 1000;
 }
-.rc-color-picker-wrap {
+.bzl-rc-color-picker-wrap {
   display: inline-block;
 }
-.rc-color-picker-slide-up-enter {
-  animation-duration: .3s;
+.bzl-rc-color-picker-slide-up-enter {
+  animation-duration: 0.3s;
   animation-fill-mode: both;
   transform-origin: 0 0;
   display: block !important;
@@ -319,8 +319,8 @@
   animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
   animation-play-state: paused;
 }
-.rc-color-picker-slide-up-appear {
-  animation-duration: .3s;
+.bzl-rc-color-picker-slide-up-appear {
+  animation-duration: 0.3s;
   animation-fill-mode: both;
   transform-origin: 0 0;
   display: block !important;
@@ -328,8 +328,8 @@
   animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
   animation-play-state: paused;
 }
-.rc-color-picker-slide-up-leave {
-  animation-duration: .3s;
+.bzl-rc-color-picker-slide-up-leave {
+  animation-duration: 0.3s;
   animation-fill-mode: both;
   transform-origin: 0 0;
   display: block !important;
@@ -337,27 +337,27 @@
   animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
   animation-play-state: paused;
 }
-.rc-color-picker-slide-up-enter.rc-color-picker-slide-up-enter-active.rc-color-picker-placement-bottomLeft,
-.rc-color-picker-slide-up-enter.rc-color-picker-slide-up-enter-active.rc-color-picker-placement-bottomRight,
-.rc-color-picker-slide-up-appear.rc-color-picker-slide-up-appear-active.rc-color-picker-placement-bottomLeft,
-.rc-color-picker-slide-up-appear.rc-color-picker-slide-up-appear-active.rc-color-picker-placement-bottomRight {
+.bzl-rc-color-picker-slide-up-enter.bzl-rc-color-picker-slide-up-enter-active.bzl-rc-color-picker-placement-bottomLeft,
+.bzl-rc-color-picker-slide-up-enter.bzl-rc-color-picker-slide-up-enter-active.bzl-rc-color-picker-placement-bottomRight,
+.bzl-rc-color-picker-slide-up-appear.bzl-rc-color-picker-slide-up-appear-active.bzl-rc-color-picker-placement-bottomLeft,
+.bzl-rc-color-picker-slide-up-appear.bzl-rc-color-picker-slide-up-appear-active.bzl-rc-color-picker-placement-bottomRight {
   animation-name: rcColorPickerSlideUpIn;
   animation-play-state: running;
 }
-.rc-color-picker-slide-up-enter.rc-color-picker-slide-up-enter-active.rc-color-picker-placement-topLeft,
-.rc-color-picker-slide-up-enter.rc-color-picker-slide-up-enter-active.rc-color-picker-placement-topRight,
-.rc-color-picker-slide-up-appear.rc-color-picker-slide-up-appear-active.rc-color-picker-placement-topLeft,
-.rc-color-picker-slide-up-appear.rc-color-picker-slide-up-appear-active.rc-color-picker-placement-topRight {
+.bzl-rc-color-picker-slide-up-enter.bzl-rc-color-picker-slide-up-enter-active.bzl-rc-color-picker-placement-topLeft,
+.bzl-rc-color-picker-slide-up-enter.bzl-rc-color-picker-slide-up-enter-active.bzl-rc-color-picker-placement-topRight,
+.bzl-rc-color-picker-slide-up-appear.bzl-rc-color-picker-slide-up-appear-active.bzl-rc-color-picker-placement-topLeft,
+.bzl-rc-color-picker-slide-up-appear.bzl-rc-color-picker-slide-up-appear-active.bzl-rc-color-picker-placement-topRight {
   animation-name: rcColorPickerSlideDownIn;
   animation-play-state: running;
 }
-.rc-color-picker-slide-up-leave.rc-color-picker-slide-up-leave-active.rc-color-picker-placement-bottomLeft,
-.rc-color-picker-slide-up-leave.rc-color-picker-slide-up-leave-active.rc-color-picker-placement-bottomRight {
+.bzl-rc-color-picker-slide-up-leave.bzl-rc-color-picker-slide-up-leave-active.bzl-rc-color-picker-placement-bottomLeft,
+.bzl-rc-color-picker-slide-up-leave.bzl-rc-color-picker-slide-up-leave-active.bzl-rc-color-picker-placement-bottomRight {
   animation-name: rcColorPickerSlideUpOut;
   animation-play-state: running;
 }
-.rc-color-picker-slide-up-leave.rc-color-picker-slide-up-leave-active.rc-color-picker-placement-topLeft,
-.rc-color-picker-slide-up-leave.rc-color-picker-slide-up-leave-active.rc-color-picker-placement-topRight {
+.bzl-rc-color-picker-slide-up-leave.bzl-rc-color-picker-slide-up-leave-active.bzl-rc-color-picker-placement-topLeft,
+.bzl-rc-color-picker-slide-up-leave.bzl-rc-color-picker-slide-up-leave-active.bzl-rc-color-picker-placement-topRight {
   animation-name: rcColorPickerSlideDownOut;
   animation-play-state: running;
 }

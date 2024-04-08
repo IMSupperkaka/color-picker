@@ -39291,7 +39291,7 @@
 	  onChange: noop,
 	  onFocus: noop,
 	  onMount: noop,
-	  prefixCls: "rc-color-picker-panel",
+	  prefixCls: "bzl-rc-color-picker-panel",
 	  style: {}
 	};
 	module.exports = exports['default'];
