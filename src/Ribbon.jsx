@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import addEventListener from 'rc-util/lib/Dom/addEventListener';
+import React from "react";
+import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
+import addEventListener from "rc-util/lib/Dom/addEventListener";
 
 export default class Ribbon extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export default class Ribbon extends React.Component {
     this.removeListeners();
   }
 
-  onMouseDown = e => {
+  onMouseDown = (e) => {
     const x = e.clientX;
     const y = e.clientY;
 
@@ -21,11 +21,11 @@ export default class Ribbon extends React.Component {
       y,
     });
 
-    this.dragListener = addEventListener(window, 'mousemove', this.onDrag);
-    this.dragUpListener = addEventListener(window, 'mouseup', this.onDragEnd);
+    this.dragListener = addEventListener(window, "mousemove", this.onDrag);
+    this.dragUpListener = addEventListener(window, "mouseup", this.onDragEnd);
   };
 
-  onDrag = e => {
+  onDrag = (e) => {
     const x = e.clientX;
     const y = e.clientY;
     this.pointMoveTo({
@@ -34,7 +34,7 @@ export default class Ribbon extends React.Component {
     });
   };
 
-  onDragEnd = e => {
+  onDragEnd = (e) => {
     const x = e.clientX;
     const y = e.clientY;
     this.pointMoveTo({
@@ -48,7 +48,7 @@ export default class Ribbon extends React.Component {
     return `${this.props.rootPrefixCls}-ribbon`;
   };
 
-  pointMoveTo = coords => {
+  pointMoveTo = (coords) => {
     const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
     const width = rect.width;
     let left = coords.x - rect.left;
@@ -79,12 +79,23 @@ export default class Ribbon extends React.Component {
   render() {
     const prefixCls = this.getPrefixCls();
     const hue = this.props.color.hue;
-    const per = hue / 360 * 100;
+
+    const offset = (hue / 360) * 10;
+    const per = (hue / 360) * 100;
 
     return (
       <div className={prefixCls}>
-        <span ref="point" style={{ left: `${per}%` }} />
-        <div className={`${prefixCls}-handler`} onMouseDown={this.onMouseDown} />
+        <span
+          ref="point"
+          style={{
+            left: `calc(${per}% - ${offset}px)`,
+            background: `#${this.props.color.hex}`,
+          }}
+        />
+        <div
+          className={`${prefixCls}-handler`}
+          onMouseDown={this.onMouseDown}
+        />
       </div>
     );
   }

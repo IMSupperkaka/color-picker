@@ -11,7 +11,7 @@ ReactDOM.render(
   <div style={{ backgroundColor: "#ddd", padding: 20 }}>
     <ColorPickerPanel
       enableAlpha={false}
-      color={"#345679"}
+      color={"#FFFFFF"}
       onChange={onChange}
       mode="RGB"
     />

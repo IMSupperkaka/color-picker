@@ -100,11 +100,14 @@ export default class Params extends React.Component {
       this.props.onChange(color, false);
     } else {
       const hex = "#000000";
+      const color = new Color(hex);
 
       this.setState({
-        color: new Color(hex),
+        color,
         hex,
       });
+
+      this.props.onChange(color, false);
     }
   };
 
@@ -128,7 +131,7 @@ export default class Params extends React.Component {
   };
 
   handleHexChange = (event) => {
-    const hex = event.target.value;
+    const hex = event.target.value.replace("#", "");
 
     this.setState({
       hex,
@@ -226,70 +229,74 @@ export default class Params extends React.Component {
 
     return (
       <div className={paramsClasses} key={this.state.key}>
+        <div className={`${prefixCls}-lable`}>
+          <label className={`${prefixCls}-lable-hex`}>Hex</label>
+          <div className={`${prefixCls}-lable-right`}>
+            <label
+              className={`${prefixCls}-lable-number`}
+              onClick={this.handleModeChange}
+            >
+              {mode[0]}
+            </label>
+            <label
+              className={`${prefixCls}-lable-number`}
+              onClick={this.handleModeChange}
+            >
+              {mode[1]}
+            </label>
+            <label
+              className={`${prefixCls}-lable-number`}
+              onClick={this.handleModeChange}
+            >
+              {mode[2]}
+            </label>
+            {enableAlpha && (
+              <label className={`${prefixCls}-lable-alpha`}>A</label>
+            )}
+          </div>
+        </div>
         <div className={`${prefixCls}-input`}>
           <input
             className={`${prefixCls}-hex`}
             type="text"
-            maxLength="6"
+            maxLength="7"
             onKeyPress={this.handleHexPress}
             onBlur={this.handleHexBlur}
             onChange={this.handleHexChange}
-            value={this.state.hex.toLowerCase()}
+            value={`#${this.state.hex.toUpperCase()}`}
             data-cell-editor-no-blur
           />
-          <Input
-            type="number"
-            ref="channel_0"
-            value={colorChannel[0]}
-            onChange={this.handleColorChannelChange.bind(null, 0)}
-            data-cell-editor-no-blur
-          />
-          <Input
-            type="number"
-            ref="channel_1"
-            value={colorChannel[1]}
-            onChange={this.handleColorChannelChange.bind(null, 1)}
-            data-cell-editor-no-blur
-          />
-          <Input
-            type="number"
-            ref="channel_2"
-            value={colorChannel[2]}
-            onChange={this.handleColorChannelChange.bind(null, 2)}
-            data-cell-editor-no-blur
-          />
-          {enableAlpha && (
+          <div className={`${prefixCls}-input-right`}>
             <Input
               type="number"
-              value={Math.round(this.props.alpha)}
-              onChange={this.handleAlphaHandler}
+              ref="channel_0"
+              value={colorChannel[0]}
+              onChange={this.handleColorChannelChange.bind(null, 0)}
               data-cell-editor-no-blur
             />
-          )}
-        </div>
-        <div className={`${prefixCls}-lable`}>
-          <label className={`${prefixCls}-lable-hex`}>Hex</label>
-          <label
-            className={`${prefixCls}-lable-number`}
-            onClick={this.handleModeChange}
-          >
-            {mode[0]}
-          </label>
-          <label
-            className={`${prefixCls}-lable-number`}
-            onClick={this.handleModeChange}
-          >
-            {mode[1]}
-          </label>
-          <label
-            className={`${prefixCls}-lable-number`}
-            onClick={this.handleModeChange}
-          >
-            {mode[2]}
-          </label>
-          {enableAlpha && (
-            <label className={`${prefixCls}-lable-alpha`}>A</label>
-          )}
+            <Input
+              type="number"
+              ref="channel_1"
+              value={colorChannel[1]}
+              onChange={this.handleColorChannelChange.bind(null, 1)}
+              data-cell-editor-no-blur
+            />
+            <Input
+              type="number"
+              ref="channel_2"
+              value={colorChannel[2]}
+              onChange={this.handleColorChannelChange.bind(null, 2)}
+              data-cell-editor-no-blur
+            />
+            {enableAlpha && (
+              <Input
+                type="number"
+                value={Math.round(this.props.alpha)}
+                onChange={this.handleAlphaHandler}
+                data-cell-editor-no-blur
+              />
+            )}
+          </div>
         </div>
       </div>
     );

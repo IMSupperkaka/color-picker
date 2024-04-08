@@ -1,6 +1,6 @@
 {
   "name": "@bzl/rc-color-picker",
-  "version": "1.2.6-beta.3",
+  "version": "1.2.6-beta.6",
   "description": "color-picker ui component for react",
   "main": "./lib/index.js",
   "keywords": [
